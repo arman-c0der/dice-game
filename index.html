@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(to right, #3498db, #8e44ad);
+        color: white;
+      }
+      .game-container {
+        text-align: center;
+      }
+      .players {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+      .player {
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .current-player {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      #dice {
+        font-size: 100px;
+        margin: 20px 0;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      #gameStatus {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Dice Game</h1>
+      <div class="players">
+        <div id="player1" class="player">
+          <h2>Player 1</h2>
+          <p>Score: <span id="score1">0</span></p>
+          <p>Wins: <span id="wins1">0</span></p>
+        </div>
+        <div id="player2" class="player">
+          <h2>Player 2</h2>
+          <p>Score: <span id="score2">0</span></p>
+          <p>Wins: <span id="wins2">0</span></p>
+        </div>
+      </div>
+      <div id="dice">⚀</div>
+      <button id="rollButton">Roll Dice</button>
+      <button id="resetButton">Reset Game</button>
+      <p id="gameStatus">Player 1's turn</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
